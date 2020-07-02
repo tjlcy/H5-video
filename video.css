@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* 去除浏览器内置内边框和外边框，防止干扰布局 */
+    background-color: #f7f7f7;
+}
+
+.playerTitle {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.player {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    /* 实现居中 */
+    position: relative;
+    background: url(loading.gif) center no-repeat;
+    /* 模拟视频播放前的预加载 */
+    background-size: cover;
+}
+
+video {
+    height: 100%;
+    margin: 0 auto;
+    /* 实现居中 */
+    display: none;
+    /* 视频先不显示，先模拟视频播放前的加载 */
+}
+
+.controls {
+    width: 640px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.controls>.switch {
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.controls>.expand {
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.controls>.progress {
+    width: 350px;
+    height: 10px;
+    position: absolute;
+    left: 40px;
+    bottom: 15px;
+    background-color: #555;
+}
+
+.controls>.progress>.bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 999;
+    /* 使它置于最后一层 */
+}
+
+.controls>.progress>.loaded {
+    width: 60%;
+    height: 100%;
+    background-color: #999;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    /* 置于第二层 */
+}
+
+.controls>.progress>.elapse {
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    /* 置于第三层 */
+}
+
+.controls>.time {
+    height: 20px;
+    position: absolute;
+    left: 430px;
+    top: 10px;
+    color: #Fff;
+    font-size: 14px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放器</title>
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="video.css">
+
+</head>
+
+<body>
+    <h3 class="playerTitle">视频播放器</h3>
+    <div class="player">
+        <!-- 视频区 -->
+        <video src="2.mp4"></video>
+        <!-- 控制区 -->
+        <div class="controls">
+            <a href="javascript:;" class="switch fa fa-play"></a>
+            <!-- 播放暂停切换按钮 -->
+            <a href="javascript:;" class="expand fa fa-expand"></a>
+            <!-- 全屏 -->
+            <!-- 进度条区域 -->
+            <div class="progress">
+                <!-- 响应事件/总时长 -->
+                <div class="bar"></div>
+                <!-- 已加载 -->
+                <div class="loaded"></div>
+                <!-- 已播放 -->
+                <div class="elapse"></div>
+            </div>
+            <!-- 时间显示区域 -->
+            <div class="time">
+                <span class="currentTime">00:00:00</span> \
+                <span class="totalTime">00:00:00</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="tool.js"></script>
+<script src="video.js"></script>
+<script>
+    (2 < 3) ? console.log("正确"): console.log("错误");
+</script>
+
+</html>
